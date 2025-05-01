@@ -1,0 +1,165 @@
+/* Modern, clean white background theme with bold colors */
+:root {
+  --primary: #4361ee;       /* Vibrant blue */
+  --electric: #4cc9f0;      /* Electric teal */
+  --pm25: #f72585;          /* Hot pink */
+  --gasoline: #f8961e;      /* Bright orange */
+  --diesel: #7209b7;        /* Deep purple */
+  --hybrid: #43aa8b;        /* Emerald green */
+  --plug-in: #577590;       /* Steel blue */
+  --other: #b8b8ff;         /* Light periwinkle */
+  --success: #06d6a0;       /* Mint green */
+  --warning: #ffd166;       /* Golden yellow */
+  --danger: #ef476f;        /* Coral red */
+}
+
+/* Main layout styles */
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #2b2d42;
+    line-height: 1.6;
+}
+
+/* Dashboard title */
+.dashboard-title {
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 24px;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+}
+
+/* Card styles - Modern neumorphic design */
+.card {
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Graph container - Ultra clean */
+.graph-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 16px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Slider styles - Modern */
+.rc-slider-track {
+    background-color: var(--primary);
+    height: 6px;
+}
+
+.rc-slider-handle {
+    border: solid 3px var(--primary);
+    width: 20px;
+    height: 20px;
+    margin-top: -8px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(67, 97, 238, 0.4);
+}
+
+.rc-slider-handle:hover {
+    border-color: var(--primary);
+}
+
+/* Dropdown styles - Sleek modern */
+.Select-control {
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: none !important;
+    transition: all 0.3s;
+}
+
+.Select-control:hover {
+    border-color: var(--primary) !important;
+}
+
+.Select-menu-outer {
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    border: none !important;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a56d4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .graph-container {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .dashboard-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Hover effects for interactive elements */
+.Select-option:hover, .Select-option:focus {
+    background-color: rgba(67, 97, 238, 0.1) !important;
+    color: var(--primary) !important;
+}
+
+/* Custom marker for electric vehicles in legends */
+.electric-marker {
+    background-color: var(--electric) !important;
+}
+
+/* Custom marker for PM2.5 in legends */
+.pm25-marker {
+    background-color: var(--pm25) !important;
+}
